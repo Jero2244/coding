@@ -1,0 +1,13 @@
+#! /usr/bin/python3
+
+import shutil, os
+
+#os.walk()
+for folderName, subfolders, filenames in os.walk('.'):
+    for filename in filenames:
+        if filename.endswith('.py'):
+            shutil.copy(os.path.join('/home/jero/Desktop/coding', filename), '/home/jero/Desktop/coding/backup')
+
+#find those that end in .py
+
+#copy to a new folder
